@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"bin**/*.js\" \"lib/**/*.js\""
+    "format": "prettier --write \"bin**/*.js\" \"lib/**/*.js\"",
+    "commit": "git-cz"
   },
   "bin": {
     "xieyezi-cli": "bin/index.js"
@@ -24,11 +25,32 @@
     "semver": "^7.1.1"
   },
   "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-customizable": "^6.2.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "cz-customizable": {
+    "config": ".cz-config.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "npm run format",
+      "git add"
+    ]
   },
   "engines": {
     "node": ">=8.9"
