@@ -1,0 +1,36 @@
+{
+  "name": "xieyezi-cli",
+  "version": "1.0.0",
+  "description": "xieyezi cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"bin**/*.js\" \"lib/**/*.js\""
+  },
+  "bin": {
+    "xieyezi-cli": "bin/index.js"
+  },
+  "author": "xieyezi",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "download-git-repo": "^3.0.2",
+    "figlet": "^1.2.4",
+    "fs-extra": "^8.1.0",
+    "inquirer": "^7.0.1",
+    "ora": "^4.0.3",
+    "promise-exec": "^0.1.0",
+    "semver": "^7.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1"
+  },
+  "engines": {
+    "node": ">=8.9"
+  }
+}
