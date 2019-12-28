@@ -3,11 +3,14 @@
 const package = require('../package.json')
 const chalk = require('chalk')
 const program = require('commander')
+const semver = require('semver')
 const requiredVersion = package.engines.node
 const create = require('../lib/create')
 const enhanceErrorMessages = require('../lib/enhanceErrorMessages')
-// projcetName
-// let projectName = null;
+const didYouMean = require('didyoumean')
+// Setting edit distance to 60% of the input string's length
+didYouMean.threshold = 0.6
+
 function checkNodeVersion(wanted, id) {
   if (!semver.satisfies(process.version, wanted)) {
     console.log(
@@ -25,7 +28,7 @@ function checkNodeVersion(wanted, id) {
   }
 }
 /**
- * Check node version before requiring/doing anything else
+ * Check node version required >=9.0
  */
 checkNodeVersion(requiredVersion, '@xieyezi/cli')
 /**
@@ -34,7 +37,7 @@ checkNodeVersion(requiredVersion, '@xieyezi/cli')
 program.version(package.version).usage('<command> [options]')
 program
   .command('create <app-name>')
-  .description('  Create a project with template from @iwubida')
+  .description('  Create a project with template from xieyezi react template.')
   .action((name, cmd) => {
     create(name)
   })
@@ -44,7 +47,7 @@ program.parse(process.argv)
  */
 program.arguments('<command>').action((cmd) => {
   program.outputHelp()
-  console.log('  ' + chalk.red(`Unknown command ${chalk.yellow(cmd)}.`))
+  console.log('  ' + chalk.red(`Unknown command ${chalk.yellow(cmd)}`))
   console.log()
   suggestCommands(cmd)
 })
