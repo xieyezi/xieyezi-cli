@@ -20,7 +20,7 @@
     "download-git-repo": "^3.0.2",
     "figlet": "^1.2.4",
     "fs-extra": "^8.1.0",
-    "inquirer": "^7.0.1",
+    "inquirer": "^7.0.0",
     "ora": "^4.0.3",
     "promise-exec": "^0.1.0",
     "semver": "^7.1.1"
