@@ -32,6 +32,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
+    "pont-engine": "0.3.5",
     "prettier": "^1.19.1"
   },
   "config": {

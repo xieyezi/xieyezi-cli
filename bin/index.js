@@ -41,7 +41,6 @@ program
   .action((name, cmd) => {
     create(name)
   })
-program.parse(process.argv)
 /***
  * output help information on unknown commands
  */
