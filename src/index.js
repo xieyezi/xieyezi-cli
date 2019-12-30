@@ -1,12 +1,10 @@
-#!/usr/bin/env node
-
-const package = require('../package.json')
+const config = require('../package.json')
 const chalk = require('chalk')
 const program = require('commander')
 const semver = require('semver')
-const requiredVersion = package.engines.node
-const create = require('../lib/create')
-const enhanceErrorMessages = require('../lib/enhanceErrorMessages')
+const requiredVersion = config.engines.node
+const create = require('./lib/create')
+const enhanceErrorMessages = require('./lib/enhanceErrorMessages')
 const didYouMean = require('didyoumean')
 // Setting edit distance to 60% of the input string's length
 didYouMean.threshold = 0.6
@@ -34,7 +32,7 @@ checkNodeVersion(requiredVersion, '@xieyezi/cli')
 /**
  * start create app
  */
-program.version(package.version).usage('<command> [options]')
+program.version(config.version).usage('<command> [options]')
 program
   .command('create <app-name>')
   .description('  Create a project with template from xieyezi react template.')

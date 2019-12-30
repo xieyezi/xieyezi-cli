@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"bin**/*.js\" \"lib/**/*.js\"",
-    "commit": "git-cz"
+    "format": "prettier --write \"src/**/*.js\"",
+    "commit": "git-cz",
+    "clean": "rm -rf ./bin && mkdir bin",
+    "build": "yarn format && yarn clean && rollup -c"
   },
   "bin": {
-    "xieyezi-cli": "bin/index.js"
+    "xieyezi-cli": "bin/xieyezi-cli.js"
   },
   "author": "xieyezi",
   "license": "ISC",
@@ -25,6 +27,16 @@
     "semver": "^7.1.1"
   },
   "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.12.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-polyfill": "^6.22.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-stage-2": "^6.5.0",
     "commitizen": "^4.0.3",
     "cz-customizable": "^6.2.0",
     "eslint": "^6.8.0",
@@ -32,7 +44,11 @@
     "husky": "^3.1.0",
     "lint-staged": "^9.5.0",
     "pont-engine": "0.3.5",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.1.3"
   },
   "config": {
     "commitizen": {
