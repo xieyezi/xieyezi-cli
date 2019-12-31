@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.js\"",
+    "format": "prettier --write \"bin/**/*.js\" \"lib/**/*.js\"",
     "commit": "git-cz"
   },
   "bin": {
