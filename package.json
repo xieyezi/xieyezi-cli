@@ -1,6 +1,6 @@
 {
   "name": "xieyezi-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "xieyezi cli",
   "main": "index.js",
   "scripts": {
@@ -11,6 +11,13 @@
   "bin": {
     "xieyezi-cli": "bin/xieyezi-cli.js"
   },
+  "repository": "https://github.com/xieyezi/xieyezi-cli.git",
+  "keywords": [
+    "cli",
+    "react",
+    "template",
+    "vue"
+  ],
   "author": "xieyezi",
   "license": "ISC",
   "dependencies": {
