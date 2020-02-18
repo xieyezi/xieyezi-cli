@@ -36,7 +36,7 @@ checkNodeVersion(requiredVersion, '@xieyezi/cli')
 program.version(config.version).usage('<command> [options]')
 program
   .command('create <app-name>')
-  .description('  Create a project with template from xieyezi react template.')
+  .description('  Create a project with template from xieyezi git repository.')
   .action((name, cmd) => {
     create(name)
   })
