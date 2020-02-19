@@ -1,7 +1,27 @@
 {
   "name": "xieyezi-cli",
   "version": "1.0.3",
-  "description": "xieyezi cli",
+  "description": "A cli for creating vue / react projects ",
+  "keywords": [
+		"xieyezi-cli",
+		"react-cli",
+		"vue-cli",
+    "create-react-app",
+    "template",
+		"@vue/cli",
+		"cli",
+		"react",
+		"vue",
+		"webpack",
+		"sass",
+		"babel",
+		"typescript",
+		"stylelint",
+		"eslint",
+		"tslint",
+		"build",
+		"init"
+	],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,12 +32,6 @@
     "xieyezi-cli": "bin/xieyezi-cli.js"
   },
   "repository": "https://github.com/xieyezi/xieyezi-cli.git",
-  "keywords": [
-    "cli",
-    "react",
-    "template",
-    "vue"
-  ],
   "author": "xieyezi",
   "license": "ISC",
   "dependencies": {
